@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   title: "Events | Gateway Christian Faith Baptist Church",
   description:
     "Stay up to date with upcoming events and weekly gatherings at GCFBC. There's always something happening in our community.",
+  openGraph: {
+    title: "Events | Gateway Christian Faith Baptist Church",
+    description: "Stay up to date with upcoming events and weekly gatherings at GCFBC. There's always something happening.",
+    url: "https://gcfbc.vercel.app/events",
+    siteName: "GCFBC",
+    type: "website",
+  },
 };
 
 export default function EventsPage() {

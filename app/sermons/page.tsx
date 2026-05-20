@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   title: "Sermons | Gateway Christian Faith Baptist Church",
   description:
     "Watch messages from GCFBC's sermon archive. Available for members, visitors, and anyone exploring faith — any time, any place.",
+  openGraph: {
+    title: "Sermons | Gateway Christian Faith Baptist Church",
+    description: "Watch messages from GCFBC's sermon archive. Available for members, visitors, and anyone exploring faith.",
+    url: "https://gcfbc.vercel.app/sermons",
+    siteName: "GCFBC",
+    type: "website",
+  },
 };
 
 export default function SermonsPage() {

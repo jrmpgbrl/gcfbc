@@ -57,23 +57,21 @@ export default function ContactInfo() {
             <div className="mt-6 pt-6 border-t border-border">
               <p className="text-sm font-medium text-foreground mb-3">Follow Us</p>
               <div className="flex gap-4">
-                {/* CLIENT: replace with actual social media URLs */}
+                {/* CLIENT: replace href with actual social media URLs (e.g. https://facebook.com/yourchurchname) */}
                 <a
-                  href="https://facebook.com"
-                  aria-label="GCFBC on Facebook"
-                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#"
+                  aria-label="GCFBC on Facebook (link coming soon)"
+                  aria-disabled="true"
+                  className="flex items-center gap-2 text-sm text-muted-foreground pointer-events-none opacity-50"
                 >
                   <ExternalLink className="w-4 h-4" aria-hidden="true" />
                   <span>Facebook</span>
                 </a>
                 <a
-                  href="https://youtube.com"
-                  aria-label="GCFBC on YouTube"
-                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#"
+                  aria-label="GCFBC on YouTube (link coming soon)"
+                  aria-disabled="true"
+                  className="flex items-center gap-2 text-sm text-muted-foreground pointer-events-none opacity-50"
                 >
                   <ExternalLink className="w-4 h-4" aria-hidden="true" />
                   <span>YouTube</span>

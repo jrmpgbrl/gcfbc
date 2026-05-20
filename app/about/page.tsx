@@ -9,6 +9,13 @@ export const metadata: Metadata = {
   title: "About Us | Gateway Christian Faith Baptist Church",
   description:
     "Learn about GCFBC's history, what we believe, and the leaders who serve our congregation. A community rooted in Scripture and open to all.",
+  openGraph: {
+    title: "About Us | Gateway Christian Faith Baptist Church",
+    description: "Learn about GCFBC's history, what we believe, and the leaders who serve our congregation.",
+    url: "https://gcfbc.vercel.app/about",
+    siteName: "GCFBC",
+    type: "website",
+  },
 };
 
 export default function AboutPage() {

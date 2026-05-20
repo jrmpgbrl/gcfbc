@@ -8,6 +8,13 @@ export const metadata: Metadata = {
   title: "Give | Gateway Christian Faith Baptist Church",
   description:
     "Support the mission of GCFBC through online giving, in-person offering, or by mail. Your generosity makes a difference.",
+  openGraph: {
+    title: "Give | Gateway Christian Faith Baptist Church",
+    description: "Support the mission of GCFBC through online giving, in-person offering, or by mail. Your generosity makes a difference.",
+    url: "https://gcfbc.vercel.app/give",
+    siteName: "GCFBC",
+    type: "website",
+  },
 };
 
 export default function GivePage() {

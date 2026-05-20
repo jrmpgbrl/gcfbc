@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   title: "Ministries | Gateway Christian Faith Baptist Church",
   description:
     "Explore the ministries of GCFBC — Children, Youth, Men, Women, Worship, Outreach, Prayer, and Senior Adults. There's a place for everyone.",
+  openGraph: {
+    title: "Ministries | Gateway Christian Faith Baptist Church",
+    description: "Explore the ministries of GCFBC — Children, Youth, Men, Women, Worship, Outreach, Prayer, and Senior Adults.",
+    url: "https://gcfbc.vercel.app/ministries",
+    siteName: "GCFBC",
+    type: "website",
+  },
 };
 
 export default function MinistriesPage() {

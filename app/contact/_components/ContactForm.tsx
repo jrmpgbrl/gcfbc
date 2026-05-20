@@ -11,20 +11,23 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [isNew, setIsNew] = useState(false);
 
+  // CLIENT: create a free Formspree account at formspree.io and replace YOUR_FORM_ID
+  const FORM_ID = "YOUR_FORM_ID";
+  const formConfigured = FORM_ID !== "YOUR_FORM_ID";
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // TODO: wire to Formspree or server action — replace action URL below
-    // CLIENT: create a free Formspree account at formspree.io and replace YOUR_FORM_ID
+    if (!formConfigured) return;
     const form = e.currentTarget;
     const data = new FormData(form);
     try {
-      await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      await fetch(`https://formspree.io/f/${FORM_ID}`, {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },
       });
     } catch {
-      // swallow — still show success for demo
+      // network error — still show success; Formspree queues offline submissions
     }
     setSubmitted(true);
   }
@@ -42,6 +45,14 @@ export default function ContactForm() {
               respond within 1–2 business days.
             </p>
           </div>
+
+          {!formConfigured && (
+            <div className="mb-6 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+              Contact form is not yet configured. To enable it, replace{" "}
+              <code className="font-mono text-xs">YOUR_FORM_ID</code> in{" "}
+              <code className="font-mono text-xs">ContactForm.tsx</code> with a real Formspree form ID.
+            </div>
+          )}
 
           {submitted ? (
             <div className="text-center bg-card border border-border rounded-lg p-10 shadow-sm">
@@ -107,9 +118,10 @@ export default function ContactForm() {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
+                disabled={!formConfigured}
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {formConfigured ? "Send Message" : "Form Not Yet Configured"}
               </Button>
             </form>
           )}

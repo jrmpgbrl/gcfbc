@@ -78,24 +78,22 @@ export default function Footer() {
             </ul>
             {/* Social links */}
             <div className="flex gap-3 mt-4">
-              {/* CLIENT: replace href with actual Facebook page URL */}
+              {/* CLIENT: replace href with actual Facebook page URL (e.g. https://facebook.com/yourchurchname) */}
               <a
-                href="https://facebook.com"
-                aria-label="GCFBC on Facebook"
-                className="flex items-center gap-1 text-sm text-primary-foreground/60 hover:text-accent transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#"
+                aria-label="GCFBC on Facebook (link coming soon)"
+                aria-disabled="true"
+                className="flex items-center gap-1 text-sm text-primary-foreground/60 hover:text-accent transition-colors pointer-events-none opacity-50"
               >
                 <ExternalLink className="w-4 h-4" aria-hidden="true" />
                 <span>Facebook</span>
               </a>
-              {/* CLIENT: replace href with actual YouTube channel URL */}
+              {/* CLIENT: replace href with actual YouTube channel URL (e.g. https://youtube.com/@yourchurch) */}
               <a
-                href="https://youtube.com"
-                aria-label="GCFBC on YouTube"
-                className="flex items-center gap-1 text-sm text-primary-foreground/60 hover:text-accent transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#"
+                aria-label="GCFBC on YouTube (link coming soon)"
+                aria-disabled="true"
+                className="flex items-center gap-1 text-sm text-primary-foreground/60 hover:text-accent transition-colors pointer-events-none opacity-50"
               >
                 <ExternalLink className="w-4 h-4" aria-hidden="true" />
                 <span>YouTube</span>

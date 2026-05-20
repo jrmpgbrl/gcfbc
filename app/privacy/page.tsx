@@ -5,7 +5,15 @@ import SectionWrapper from "@/components/SectionWrapper";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Gateway Christian Faith Baptist Church",
-  description: "Privacy Policy for the GCFBC website.",
+  description:
+    "Read the GCFBC privacy policy. We explain what information we collect through our contact form and how we use it to serve our congregation.",
+  openGraph: {
+    title: "Privacy Policy | Gateway Christian Faith Baptist Church",
+    description: "Read the GCFBC privacy policy — how we collect and use contact form information.",
+    url: "https://gcfbc.vercel.app/privacy",
+    siteName: "GCFBC",
+    type: "website",
+  },
 };
 
 export default function PrivacyPage() {

@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   title: "Contact | Gateway Christian Faith Baptist Church",
   description:
     "Get in touch with GCFBC. Find our address, phone number, office hours, and send us a message. We'd love to hear from you.",
+  openGraph: {
+    title: "Contact | Gateway Christian Faith Baptist Church",
+    description: "Get in touch with GCFBC. Find our address, phone number, office hours, and send us a message.",
+    url: "https://gcfbc.vercel.app/contact",
+    siteName: "GCFBC",
+    type: "website",
+  },
 };
 
 export default function ContactPage() {
